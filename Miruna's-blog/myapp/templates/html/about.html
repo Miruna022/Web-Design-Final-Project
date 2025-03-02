@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Miruna-About</title>
+    {% load static %}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{% static 'css/about.css' %}">
+    <link rel="stylesheet" href="{% static 'css/menu.css' %}">
+    <link rel="stylesheet" href="{% static 'css/index_BackToTop.css' %}">
+    <script src="{% static 'js/menu.js' %}"></script>
+    <script src="{% static 'js/index_BackToTop.js' %}"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="sidebar">
+                <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+                <li><a href="{% url 'home' %}">HOME</a></li>
+                <li><a href="{% url 'about' %}">ABOUT</a></li>
+                <li><a href="{% url 'gallery' %}">GALLERY</a></li>
+                <li><a href="{% url 'form' %}">FORM</a></li>
+                <li><a href="{% url 'chatbot' %}">QUESTIONS</a></li>
+            </ul>
+            <ul>
+                <li><a href="#">Miruna's Blog</a></li>
+                <li class="hideOnMobile"><a href="{% url 'home' %}">HOME</a></li>
+                <li class="hideOnMobile"><a href="{% url 'about' %}">ABOUT</a></li>
+                <li class="hideOnMobile"><a href="{% url 'gallery' %}">GALLERY</a></li>
+                <li class="hideOnMobile"><a href="{% url 'form' %}">FORM</a></li>
+                <li class="hideOnMobile"><a href="{% url 'chatbot' %}">QUESTIONS</a></li>
+                <li class="menu-button" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        {% block content %}
+        <button onclick="scrollToTop()" id="scrollToTopBtn" title="Go to top"><i style="font-size:3.5vh" class="fa">&#xf077;</i></button>
+        <div id="welcome">
+            <h1>Get to know me!</h1>
+        </div>
+        <section class="container">
+            <div class="content">
+                <p id="intro">Hello, I'm</p>
+                <h1 class="title">Miruna</h1>
+                <p class="description"> a first year Computer Science student</p>
+            </div>
+            <img src="{% static 'images/pfp 2.png' %}" alt="Miruna's profile picture" class="image">
+        </section>
+
+        <section id="about">
+            <h1 class="header">About Me</h1>
+            <div class="section-container">
+                <div class="pic-container">
+                    <img src="{% static 'images/pfp 2.jpg' %}" alt="Profile picture" class="about-pic">
+                </div>
+                <div class="about-details-container">
+                    <div class="about-containers">
+                        <div class="details-container">
+                            <br>
+                            <h2>Experience</h2><br>
+                            <p class="text"><strong>Web Designer</strong><br> Creative Web Works, 2020-2022 </p>
+                        </div>
+                        <div class="details-container">
+                            <h2>Education</h2><br>
+                            <p class="text"><strong>Computer Science in English</strong><br> West University of Timisoara, 2023-present</p>
+                            <p class="text"><strong>Natural Sciences in English</strong><br> "Gheorghe Lazar" National College Sibiu, 2019-2023</p>
+                        </div>
+                    </div>
+                    <div class="text-container">
+                        <p class="text" style="text-indent: 40px;">My name is Miruna Mesarosiu and I am 19 years old. I am currently a first year bachelor student at West University of Timisoara, studying Computer Science. I love learning new things and having fun with my friends. Some of my hobbies include reading, playing the guitar and video gaming. Thank you for visiting my site!</p>
+                    </div>
+                    <br><br>
+                </div>
+            </div>
+        </section>
+
+        <article id="more">
+            <p class="text-p1">Explore My</p>
+            <h2 class="header">Skills</h2>
+            <br>
+            <div class="group">
+                <div class="box-1">
+                    <ul type="none">
+                        <li class="text"><strong>Mother tongue</strong> - Romanian </li>
+                        <li class="text"><strong>Communication skills</strong> - Good communication and active listening skills </li>
+                        <li class="text"><strong>Organisational skills</strong> - Collaboration and teamwork skills gained through participating in projects in highschool </li>
+                        <li class="text"><strong>Programming skills</strong> - proficient in Python, learning C and C++ </li>
+                        <!-- Add more skills entries as needed -->
+                    </ul>
+                </div>
+                <div class="box-2">
+                    <li><strong>Other languages</strong>
+                        <table style="width:50%; border:2px solid black;">
+                            <tr>
+                                <th class="text">Language</th>
+                                <th class="text">Listening</th> 
+                                <th class="text">Reading</th>
+                                <th class="text">Spoken interaction</th> 
+                                <th class="text">Spoken production</th>
+                                <th class="text">Writing</th>   
+                            </tr>
+                            <tr>
+                                <td class="text">English</td>
+                                <td class="text">C1</td>
+                                <td class="text">C1</td>
+                                <td class="text">C2</td>
+                                <td class="text">C2</td>
+                                <td class="text">C2</td>
+                            </tr>
+                            <tr>
+                                <td class="text">French</td>
+                                <td class="text">A2</td>
+                                <td class="text">B1</td>
+                                <td class="text">A1</td>
+                                <td class="text">A1</td>
+                                <td class="text">A1</td>
+                            </tr>
+                        </table>
+                    </li>
+                    </ul>
+                </div>
+            </div>
+            <br><br>
+            <h2 class="header">Achievements</h2>
+            <div class="details-container">
+                <ul type="none">
+                    <li class="text"><strong>Extracurricular Activities</strong> - participated in the debate club during highschool </li>
+                    <li class="text"><strong>College Acceptance</strong> - being accepted into WUT </li>
+                    <!-- Add more achievements entries as needed -->    
+            </div>
+        </article>   
+        {% endblock %} 
+    </main>
+
+    <footer>
+        <p>For inquiries, please contact me.</p>
+            <address>
+                <a href="mailto:mes.miruna@gmail.com">E-mail</a>
+                <br><a href="tel:+40747544865">Phone number</a>
+            </address>
+        <p class="copyright">&copy; 2024 Miruna - Blog</p>
+    </footer>
+</body>
+</html>

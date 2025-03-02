@@ -1,0 +1,355 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    min-height: 100vh;
+    font-family: serif;
+    background-color: rgb(32, 30, 30);
+    background-image: url(../images/about.jpg);
+    background-position: top;
+    background-size: cover;
+}
+
+/*CONTENT*/
+/*INTRO*/
+#welcome{
+    display: flex;
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center;
+    width: fit-content;
+    margin: 10% auto;
+}
+#welcome h1{
+    display: inline-block;
+    position: relative;
+    color: white;
+    font-size: 8vw;
+    font-weight: bold;
+    letter-spacing: 3px;  
+    text-align: center;
+    border-right: 3px solid;
+    /*animation*/
+    width: 100%;
+    height: inherit;
+    white-space: nowrap;
+    overflow: hidden;
+    animation:
+        typing 2s steps(15),
+        cursor .4s step-end infinite alternate;
+}
+@keyframes cursor{
+    50% {border-color: transparent}
+}
+@keyframes typing{
+    from {width: 0}
+}
+.container{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    gap: 5rem;
+    height: 85vh;
+    padding: 0 12%;
+    background-color: #fdf7e4;
+}
+.content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: black;
+    margin-top: 10%;
+    flex-wrap: wrap;
+}
+#intro{
+    font-size: 4vw;
+    margin-bottom: 15px; 
+}
+.title{
+    font-size: 6.5vw;
+    font-weight: 900;
+    margin-bottom: 33px;
+}
+.description{
+    font-size: 2.5vw;
+    margin-bottom: 52px;
+    text-align: center;
+}
+.image{
+    width: 45%;
+}
+section{
+    padding-top: 10%;
+    height: inherit;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-bottom: 10%;
+    box-sizing: border-box;
+}
+
+/*ABOUT ME*/
+#about{
+    position: relative;
+    background-color: #FDF7E4;
+}
+.about-containers{
+    gap: 2rem;
+    padding-bottom: 1.5rem;
+    padding-top: 1.5rem;
+}
+.about-details-container{
+    justify-content: center;
+    flex-direction: column;
+}
+.about-containers, .about-details-container{
+    display: flex;
+}
+.about-pic{
+    border-radius: 2rem;
+}
+.details-container{
+    padding: 1.5rem;
+    flex: 1;
+    background: #FDF7E4;
+    border-radius: 2rem;
+    border: rgb(53, 53, 53) 0.1rem solid;
+    border-color: rgb(163, 163, 163);
+    text-align: center;
+}
+.section-container{
+    display: flex;
+    gap: 4rem;
+    height: 80%;   
+}
+.pic-container{
+    display: flex;
+    height: 400px;
+    margin: auto 0;
+}
+.text-p1{
+    font-weight: 600;
+    text-align: center;
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+}
+.header{
+    font-size: 8vh;
+    text-align: center;
+    padding-bottom: 4%;
+}
+.text{
+    font-size: 1.2rem;
+}
+
+/*MORE*/
+#more{
+    padding-top: 4vh;
+    height: inherit;
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-bottom: 8%;
+    box-sizing: border-box;
+    background-color: #FDF7E4;
+}
+.group{
+    display: flex;
+}
+.box-1 .text{
+    margin-bottom: 25px;
+}
+.box-1{
+    flex:1;
+    padding: 1.2rem;
+    flex: 1;
+    background: #FDF7E4;
+    border-radius: 2rem;
+    border: rgb(53, 53, 53) 0.1rem solid;
+    border-color: rgb(163, 163, 163);
+}
+.box-2{
+    flex: 1;
+    padding-left: 2.5%;
+    padding-right: 2.5%;
+    padding-top: 3%;
+}
+table {
+    border-collapse: collapse;
+}
+th {
+background-color:burlywood;
+}
+td, th {
+border: 1px solid rgb(53, 53, 53);
+padding: 8px;
+text-align: center;
+}
+
+/*FOOTER*/
+footer{
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+footer p, footer a{
+    margin: 10px 0;
+    color: white;
+    text-decoration: none;
+}
+footer a:hover{
+    text-decoration: underline;
+}
+footer address{
+    margin-bottom: 20px;
+}
+footer .copyright{
+    font-size: 13px;
+    margin-top: 20px;
+}
+
+/*ANIMATIONS*/
+@keyframes floating{
+    0%{
+        transform: translate(0, 0px);
+    }
+    50%{
+        transform: translate(0, 10px);
+    }
+    100%{
+        transform: translate(0, 0px);
+    }
+}
+.image{
+    animation-name: floating;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+@keyframes fade-in-out {
+    0% { opacity: 0; }
+    50% { opacity: 1; }
+    100% { opacity: 0; }
+}
+.about-pic{
+    animation: fade-in-out 5s infinite alternate;
+}
+
+/*RESPONSIVENESS*/
+@media (max-width: 1100px){
+    .section-container{
+        flex-direction: column;
+        gap: 0;
+    }
+    .about-containers, .about-details-container{
+        flex-direction: column;
+    }
+    .about-pic{
+        height: 350px;
+    }
+    .pic-container{
+        height: 400px;
+        justify-content: center;
+        align-items: center;
+    }
+}
+@media (max-width: 900px){
+    .group{
+        flex-direction: column;
+        align-items: center;
+    }
+    #welcome{
+        margin: 13% auto;
+    }
+    .container{
+        gap: 0;
+        justify-content: center;
+        height: inherit;
+        flex-direction: column;
+        padding-bottom: 5%;
+    }
+}
+@media (max-width: 800px){ 
+    .title, .header{
+        margin-bottom: 4%;
+        font-size: 10vh;
+    }
+    #intro{
+        margin-bottom: 2%;
+        font-size: 5vh;
+    }
+    .description{
+        margin-bottom: 6%;
+        font-size: 3vh;
+    }
+    .image{
+        width: 55%;
+        padding-bottom: 5%;
+        padding-top: 5%;
+    }
+    th, td{
+       padding: 3.5px;
+    }
+}
+@media (max-width: 600px){
+    th, td{
+        padding: 0;
+    }
+    .text{
+        font-size: 2.5vh;
+    }
+}
+@media (max-width: 400px){
+    #welcome{
+        margin: 20% auto;
+    }
+    .container{
+        gap: 0;
+        justify-content: center;
+        height: inherit;
+    }
+    .title{
+        margin-bottom: 4%;
+        font-size: 10vh;
+    }
+    #intro, .header{
+        margin-bottom: 2%;
+        font-size: 5vh;
+    }
+    .description{
+        margin-bottom: 10%;
+        font-size: 3vh;
+    }
+    .image{
+        width: 100%;
+    }
+    .section-container{
+        flex-direction: column;
+        gap: 0;
+    }
+    .about-containers, .about-details-container{
+        flex-direction: column;
+    }
+    .about-pic{
+        height: 280px;
+    }
+    .pic-container{
+        height: 320px;
+        justify-content: center;
+        align-items: center;
+    }
+    .text{
+        font-size: 2vh;
+    }
+    footer{
+        font-size: 16px;
+    }
+    footer address{
+        font-size: 15px;
+    }
+    footer .copyright{
+        font-size: 11px;
+    }
+}
+

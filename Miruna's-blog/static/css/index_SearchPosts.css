@@ -1,0 +1,24 @@
+#searchContainer{
+    text-align: center;
+    justify-items: left;
+    margin-bottom: 0;
+    margin-top: 15px;
+}
+#searchInput{
+    margin-bottom: 0;
+    padding: 10px;
+    border: 2px solid rgb(130, 6, 130);
+    background-color:purple;
+    border-radius: 3px;
+}
+#searchButton{
+    padding: 7px;
+    background-color: purple;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+#searchButton:hover{
+    background-color: rgb(192, 85, 174);
+}
